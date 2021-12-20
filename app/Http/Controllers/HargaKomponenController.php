@@ -60,6 +60,7 @@ class HargaKomponenController extends Controller
     public function update($id_harga_komponen, Request $request) {
         // mengambil harga komponen dari tabel komponen
         $komponen = Komponen::find($request->id_komponen);
+        @dd($request);
         if($komponen->id_komponen == $request->id_komponen) {
             $harga = $komponen->harga;
         }
